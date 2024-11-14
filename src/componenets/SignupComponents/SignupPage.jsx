@@ -39,7 +39,9 @@ function SignupPage() {
         validate,
         onSubmit: values => {
             firebase.singupUser(values.email, values.password);
-            navigate('/login')
+            setTimeout(() => {
+                navigate('/login');
+            }, 2000)
         }
     });
 
