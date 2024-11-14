@@ -42,10 +42,10 @@ export const FirebaseProvider = (props) => {
         toast.success("Signup successfully!", {
           position:'top-center'
         })
-        // // setTimeout(() => {
-        // //  window.location.href = '/login'
-        // // }, 2000);
-        // window.location.href = '/login'
+        setTimeout(() => {
+         window.location.href = '/login'
+        }, 2000);
+        
 
         const user = userCredential.user
         sendEmailVerification(user)
