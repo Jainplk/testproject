@@ -9,19 +9,19 @@ const FirebaseContext = createContext(null);
 
 const firebaseConfig = {
 
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  // apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  // authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  // projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  // storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  // messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  // appId: import.meta.env.VITE_FIREBASE_APP_ID
 
-  // apiKey: "AIzaSyBDZy70nzUjQYhOxP-uYchaO3eBvuiDaPU",
-  // authDomain: "zerodha-web-app.firebaseapp.com",
-  // projectId: "zerodha-web-app",
-  // storageBucket: "zerodha-web-app.firebasestorage.app",
-  // messagingSenderId: "662316734822",
-  // appId: "1:662316734822:web:85a1dfbe208ed2b1c350a7"
+  apiKey: "AIzaSyBDZy70nzUjQYhOxP-uYchaO3eBvuiDaPU",
+  authDomain: "zerodha-web-app.firebaseapp.com",
+  projectId: "zerodha-web-app",
+  storageBucket: "zerodha-web-app.firebasestorage.app",
+  messagingSenderId: "662316734822",
+  appId: "1:662316734822:web:85a1dfbe208ed2b1c350a7"
 };
 
 const app = initializeApp(firebaseConfig);
