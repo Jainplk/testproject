@@ -1,12 +1,17 @@
 {
     "version":2,
-  
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"/src/index.html"
+        }
+    ],
 
     
     "rewrites":[
         {
             "src":"/(.*)",
-            "dest":"/"
+            "dest":"/src/index.html"
         }
     ]
 }
