@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, sendEmailVerification, signOut } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const FirebaseContext = createContext(null);
@@ -61,7 +62,7 @@ export const FirebaseProvider = (props) => {
 
 // login code
   const loginUser = async (email, password) => {
- 
+  const navigate = useNavigate()
 
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -73,7 +74,7 @@ export const FirebaseProvider = (props) => {
             position:'top-center'
            });
            setTimeout(() => {
-            window.location.href = '/emailVerification'
+            navigate('/emailVerification')
          }, 2000)
         } else if(user.emailVerified){
           toast.success("Login successfully!", {
