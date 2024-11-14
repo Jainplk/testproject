@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import getImageUrl from '../utils'
 import { users, getUserData } from '../data/userInfo'
+import { useFirebase } from '../context/Firebase';
 
 function ProfilePage() {
 
     const [userImg, setUserImg] = useState(null);
     const [userData, setUserData] = useState(null);
     const inpRef = useRef(null);
-    // const firebase = useFirebase();
+    const firebase = useFirebase();
 
     const handleBtnClick = () => {
         inpRef.current.click()
