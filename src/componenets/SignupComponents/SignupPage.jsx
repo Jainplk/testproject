@@ -1,6 +1,6 @@
 import React, {useEffect } from 'react';
 import {useFormik} from 'formik'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {useFirebase} from '../../context/Firebase'
 import getImageUrl from '../../utils'
 import styles from './SignupPage.module.css'
@@ -23,9 +23,6 @@ const validate = values => {
 };
 
 function SignupPage() {
-
-    const navigate = useNavigate()
-    
  useEffect(() => {
     document.title = 'Sign up today, trade the right way!'
  })
@@ -39,10 +36,6 @@ function SignupPage() {
         validate,
         onSubmit: values => {
             firebase.singupUser(values.email, values.password);
-            setTimeout(() => {
-                navigate('/login');
-            }, 2000)
-        }
     });
 
     return ( 
