@@ -1,6 +1,6 @@
-import React, {useEffect, useNavigate} from 'react';
+import React, {useEffect } from 'react';
 import {useFormik} from 'formik'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {useFirebase} from '../../context/Firebase'
 import getImageUrl from '../../utils'
 import styles from './SignupPage.module.css'
