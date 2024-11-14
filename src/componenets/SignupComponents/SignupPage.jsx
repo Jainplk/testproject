@@ -36,6 +36,7 @@ function SignupPage() {
         validate,
         onSubmit: values => {
             firebase.singupUser(values.email, values.password);
+        }
     });
 
     return ( 
