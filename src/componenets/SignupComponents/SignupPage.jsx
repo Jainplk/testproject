@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useNavigate} from 'react';
 import {useFormik} from 'formik'
 import { Link } from 'react-router-dom';
 import {useFirebase} from '../../context/Firebase'
@@ -24,6 +24,8 @@ const validate = values => {
 
 function SignupPage() {
 
+    const navigate = useNavigate()
+    
  useEffect(() => {
     document.title = 'Sign up today, trade the right way!'
  })
@@ -37,6 +39,7 @@ function SignupPage() {
         validate,
         onSubmit: values => {
             firebase.singupUser(values.email, values.password);
+            navigate('/login')
         }
     });
 
